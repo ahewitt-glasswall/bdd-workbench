@@ -1,0 +1,41 @@
+
+struct BMP {
+    BitmapFileHeader fileheader;
+    DIBHeader dibheader;
+    BMPColorTable colorTable;
+    GAPONE gapone;
+    PixelData pixelData;
+    GAPTWO gaptwo;
+}
+
+struct GAPTWO {
+    todo data;
+}
+
+struct PixelData {
+    todo data;
+}
+
+struct GAPONE {
+    todo data;
+}
+
+struct BMPColorTable {
+    todo data;
+}
+
+struct BitmapFileHeader {
+    uint16 signature;
+    uint32 filesize;
+    uint16 reserved1;
+    uint16 reserved2;
+    uint32 fileoffsettopixelarray;
+}
+
+struct DIBHeader {
+    uint32 dibheadersize;
+}
+
+document BMPDocument {
+    BMP bmp;
+}

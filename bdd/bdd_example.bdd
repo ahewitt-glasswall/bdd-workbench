@@ -1,0 +1,30 @@
+
+struct BMP {
+    BitmapFileHeader fileheader;
+    DIBHeader dibheader;
+    (ColorTable | BMPColorTable) colortable;
+}
+
+struct ColorTable {
+    uint8 data;
+}
+
+struct BMPColorTable {
+    uint8 data;
+}
+
+struct BitmapFileHeader {
+    uint16 signature;
+    uint32 filesize;
+    uint16 reserved1;
+    uint16 reserved2;
+    uint32 fileoffsettopixelarray;
+}
+
+struct DIBHeader {
+    uint32 dibheadersize;
+}
+
+document BMPDocument {
+    BMP bmp;
+}
