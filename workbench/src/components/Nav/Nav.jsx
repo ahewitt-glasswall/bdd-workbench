@@ -6,7 +6,7 @@ function Nav() {
     const [currentButtonSelected, setCurrentButtonSelected] = useState("homeButton");
 
     return (
-        <nav className={`${styles.nav} ${true}`}>
+        <nav className={`${styles.nav} ${styles.menuExpanded}`}>
             <MenuButton
                 buttonType="homeButton"
                 text="Home"

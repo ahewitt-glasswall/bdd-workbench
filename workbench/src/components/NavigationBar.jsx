@@ -7,7 +7,7 @@ function NavigationBar() {
 
     return (
         <>
-            <div className={`${styles.mainMenu} ${true}`}>
+            <div className={`${styles.mainMenu} ${styles.expanded}`}>
                 <GlasswallLogo />
                 <Nav/>
             </div>
